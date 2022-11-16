@@ -3,17 +3,17 @@
 
 Console.Clear();
 
-int[] InputNum(int size)                                            // ввод размера массива и его элементов
+int[] InputNum(int size, int[] arr)                                            // ввод размера массива и его элементов
 {
     Console.WriteLine("Введите числа массива: ");
     //int m = int.TryParse(Console.ReadLine(), out var number);
     //int[] array = new int[m];
     
-    for(int index = 0; index < m; index++)
+    for(int index = 0; index < size; index++)
     {
-        array[index] = int.Parse(Console.ReadLine());
+        arr[index] = int.Parse(Console.ReadLine());
     }
-    return array;
+    return arr;
 }
 
 void PrintArray(int[] arr)                                          // распечатки массива
@@ -38,7 +38,7 @@ Console.WriteLine("Введите количество чисел М: ");
 int m = int.Parse(Console.ReadLine());
 int[] array = new int[m]; 
 
-InputNum(m);
+InputNum(m, array);
 Console.WriteLine();
 PrintArray(array);
 int count = CountPositive(array);
