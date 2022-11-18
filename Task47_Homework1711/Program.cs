@@ -6,11 +6,11 @@
 
 Console.Clear();
 
-Console.Write("Введите количество строк массива: ");
+Console.Write("Введите количество строк  массива   m = ");
 int rows = int.Parse(Console.ReadLine());
-
-Console.Write("Введите количество столбцов массива: ");
+Console.Write("Введите количество столбцов массива n = ");
 int columns = int.Parse(Console.ReadLine());
+Console.WriteLine();
 
 double[,] array = GetArray(rows, columns);
 PrintArray(array);
@@ -40,7 +40,9 @@ void PrintArray(double[,] inArray)
     {
         for (int j = 0; j < inArray.GetLength(1); j++)
         {
-            Console.Write($"{inArray[i, j]} ");
+            //if (j < inArray.GetLength(1) - 1) Console.Write($"{inArray[i, j], 8} |");
+            //else 
+            Console.Write($"{inArray[i, j], 8}");
         }
         Console.WriteLine();
     }
