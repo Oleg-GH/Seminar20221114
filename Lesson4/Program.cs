@@ -8,7 +8,7 @@ void PrintArray(int[,] matr)                             // метод печа�
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            Console.Write($"{matr[i, j]} ");
+            Console.Write($"{matr[i, j], 8} ");
         }
         Console.WriteLine();
     }
@@ -34,12 +34,16 @@ PrintArray(matrix);
 Console.WriteLine();
 Console.WriteLine();
 
+// Вычисление факториала
+
 double Factorial(int n)
 {
     if (n == 1) return 1;
     else return n * Factorial(n-1);
 }
-for (int i =1; i < 20; i++)
+for (int i =1; i < 10; i++)
 {
     Console.WriteLine($"{i}! = {Factorial(i)}");
 }
+
+
